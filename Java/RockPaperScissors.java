@@ -47,12 +47,11 @@ final class RockPaperScissors {
     /**
     * Gets a random choice of rock, paper or scissors.
     *
-    * @param rock string
-    * @param paper string
-    * @param scissors string
+    * @param ROCK string
+    * @param PAPER string
+    * @param SCISSORS string
     * @return random: rock, paper or scissors
     */
-
     public static String getComputerChoice(String ROCK,
           String PAPER, String SCISSORS) {
         final int min = 0;
@@ -61,13 +60,13 @@ final class RockPaperScissors {
         final String[] rockPaperScissorsArray = {ROCK, PAPER, SCISSORS};
         return rockPaperScissorsArray[randomNumber];
     }
+
     /**
     * Gets a random choice of rock, paper or scissors.
     *
     * @param scanner object
     * @return players input
     */
-
     public static String getPlayerChoice(Scanner scanner) {
         System.out.print("Choose: Rock, Paper or Scissors -->: ");
         final String playerChoice = scanner.next().toUpperCase();
@@ -82,7 +81,6 @@ final class RockPaperScissors {
     * @param computerChoice is the computer's choice
     * @return playerWon a boolean of wheter the player won or not
     */
-
     public static boolean getResult(String playerChoice,
           String computerChoice) {
         boolean playerWon = false;
@@ -106,7 +104,7 @@ final class RockPaperScissors {
     */
     public static void main(String[] args) {
 
-         System.out.println("Type 'exit' to quit the loop\n");
+        System.out.println("Type 'exit' to quit the loop\n");
 
         int score = 0;
 
@@ -114,9 +112,7 @@ final class RockPaperScissors {
             final String playerChoice = getPlayerChoice(scanner);
             final String computerChoice = getComputerChoice(ROCK,
                 PAPER, SCISSORS);
-
             System.out.println(getPlayerChoice(scanner));
-
 
             if (playerChoice.equals(EXIT)) {
                 break;
@@ -143,7 +139,7 @@ final class RockPaperScissors {
             System.out.println("\nScore: " + score);
         }
         System.out.println("\nDone.");
-      
+ 
     }
-    
+
 }
